@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="style.css" rel="stylesheet" />
+    <title>Crypto Layout</title>
+  </head>
+
+  <body>
+    <button class="show-modal-buy">BUY</button>
+    <button class="show-modal-sell">SELL</button>
+
+    <div class="modal-buy hidden">
+      <button class="close-modal">&times;</button>
+      <h1 class="buy-title">BUY</h1>
+      <form class="input">
+        <input type="text" placeholder="Price" />
+        <br />
+        <input type="text" placeholder="Amount" />
+        <p class="buy-total">TOTAL</p>
+        <button class="buy">BUY</button>
+      </form>
+    </div>
+
+    <div class="modal-sell hidden">
+      <button class="close-modal">&times;</button>
+      <h1 class="sell-title">SELL</h1>
+      <form class="input">
+        <input type="text" placeholder="Price" />
+        <br />
+        <input type="text" placeholder="Amount" />
+        <p class="sell-total">TOTAL</p>
+        <button class="sell">SELL</button>
+      </form>
+    </div>
+
+    <div class="overlay hidden"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
