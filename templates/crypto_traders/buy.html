@@ -1,0 +1,53 @@
+{% extends 'crypto_traders/base.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+
+<h1> BUY </h1>
+
+<body>
+
+<script>
+	var a = '{{ x }}'
+	if (a < 1){
+		alert('Not enough funds')
+	}
+
+</script>
+
+
+<div class="row">
+  <div class="column">
+  	{{ table }}
+  </div>
+ </div>
+
+ <form method='post'>
+  	{% csrf_token %}
+  	{{ form.as_p }}
+  	<button name='submit'>Buy</button>
+  </form>
+
+ </body>
+
+
+
+{% endblock content %}

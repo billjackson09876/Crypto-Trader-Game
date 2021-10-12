@@ -1,0 +1,53 @@
+{% extends 'crypto_traders/base.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+
+<h1> Sell </h1>
+<h2> {{ message }} </h2>
+
+<body>
+
+<script>
+  var a = '{{ x }}'
+  if (a < 1){
+    alert('Exceeds current quantity')
+  }
+
+</script>
+
+<div class="row">
+  <div class="column">
+  	{{ table }}
+  </div>
+ </div>
+
+  <form method='post'>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button name='submit'>Sell</button>
+  </form>
+
+ </body>
+
+
+
+{% endblock content %}
